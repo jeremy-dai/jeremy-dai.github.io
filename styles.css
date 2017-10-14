@@ -57,8 +57,8 @@ h1 sub:after{
 .headshot{
 	border-radius:50%;
 	overflow:hidden;
-	width:300px;
-	height:300px;
+	width:200px;
+	height:200px;
 	margin-left:auto;
 	margin-right:auto;
 	transition:transform 1s;
