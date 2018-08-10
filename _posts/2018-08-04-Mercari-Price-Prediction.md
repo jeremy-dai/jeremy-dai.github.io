@@ -130,7 +130,7 @@ print("Categorical data transformed. Time elapsed: " + str(int(time.time()-curre
 
 
 ```python
-print ("Combining Text")
+# Combining Text
 current_t = time.time()
 def text_process(data):
     # Process text    
@@ -141,7 +141,7 @@ text =text_process(tt_combine)
 print("Text data combined. Time elapsed: " + str(int(time.time()-current_t )) + "s")
 
 
-print ('Tfidf')
+# 'Tfidf'
 current_t = time.time()
 tfidf = TfidfVectorizer(ngram_range=(1,3), stop_words = 'english',max_features = 5000)
 text_features = tfidf.fit_transform(text)
@@ -150,12 +150,9 @@ print("Tfidf completed. Time elapsed: " + str(int(time.time()-current_t )) + "s"
 
 ```
 
-    Combining Text
     Text data combined. Time elapsed: 64s
-    Tfidf
     Dimension of text_features(2175894, 5000)
     Tfidf completed. Time elapsed: 1853s
-
 
 
 ```python
@@ -240,7 +237,6 @@ def test_reg(reg, features, labels):
     y_pred = np.exp(pred_label)
     jag=rmsle(y_true,y_pred)
     print(jag)
-
 
 test_reg(xgb, train_final_features, train_labels)
 ```
